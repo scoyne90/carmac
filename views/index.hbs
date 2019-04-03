@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+title {
+  padding: 50px;
+  font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+</style>
+  <head>
+      <meta charset="UTF-8">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+      <link rel="stylesheet" href="/stylesheets/products.css">
+      <link rel="stylesheet" href="/stylesheets/menucss.css">
+      <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Style the header */
+      header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+
+      /* Container for flexboxes */
+      section {
+        display: -webkit-flex;
+        display: flex;
+      }
+
+      /* Style the navigation menu */
+      nav {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: #ccc;
+        padding: 20px;
+      }
+
+      /* Style the list inside the menu */
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      /* Style the content */
+      article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: #f1f1f1;
+        padding: 10px;
+      }
+
+      /* Style the footer */
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+
+      /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+        section {
+          -webkit-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+      </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <center><img src="images\logo.JPG"  style="width:200px; height:200px;"/></center>
+        <div class="centered"><h1>CARMAC</h1><h2>Smart Phone Shop</h2></div>
+      </div>
+    </header>
+    <div class="navbar">
+
+      <A HREF="/">Homepage</A>
+      <div class="dropdown">
+        <button class="dropbtn">Brands
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="header">
+          </div>
+          <div class="row">
+            <div class="column">
+              <a href="/categories">All Brands</a>
+              <a href="/index">All Products</a>
+              <a href="/samsung">Samsung</a>
+              <a href="/apple">iPhone</a>
+              <a href="/haweii">Huawei</a>
+              <a href="/htc">HTC</a>
+              <a href="/xiaomi">Xiaomi</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <A HREF="/about">About</A>
+    </div>
+      <h3>Choose from our wide variety of phones</h3>
+      <div class="flex-container">
+          {{# each items }}
+              <article class="item" style ="margin:40px;">
+                  <div><a href="/Products_{{ this.ID }}"><img src="{{this.Image}}" style="width:300px;height:300px;"></div>
+                  <div>Name: {{ this.Name }}</div>
+                  <div>Price: {{ this.Price }}</div>
+                  <a href="#"class="btn btn-success pull-right" role="button">Add to Shopping Cart</a></p>
+              </article>
+          {{/each}}
+      </div>
+</body>
+</html>

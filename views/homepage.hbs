@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/stylesheets/menucss.css">
+  <title>CARMAC - Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Style the header */
+  header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+
+  /* Container for flexboxes */
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  /* Style the navigation menu */
+  nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+  }
+
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  /* Style the content */
+  article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <center><img src="images\logo.JPG"  style="width:120px; height:120px;"/></center>
+    <div class="centered"><h1>CARMAC</h1><h2>Smart Phone Shop</h2></div>
+  </div>
+</header>
+
+<div class="navbar">
+
+  <A HREF="/">Homepage</A>
+  <div class="dropdown">
+    <button class="dropbtn">Brands
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+      </div>
+      <div class="row">
+        <div class="column">
+          <a href="/categories">All Brands</a>
+          <a href="/index">All Products</a>
+          <a href="/samsung">Samsung</a>
+          <a href="/apple">iPhone</a>
+          <a href="/haweii">Huawei</a>
+          <a href="/htc">HTC</a>
+          <a href="/xiaomi">Xiaomi</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <A HREF="/about">About</A>
+</div>
+
+<section>
+  <article>
+    <h1>The best Smart Phones in Ireland</h1>
+    <p>Welcome to CARMAC. Please choose between from our range of smart phones by navigation through our menu.</p>
+    <p>We sell the most popular and up to date phones available today.</p>
+    <center><img src="https://cdn.mos.cms.futurecdn.net/HVgEKVWfBXYdabVU5YYbxY-970-80.jpg"  style="width:70%; height:70%;"/></center>
+  </article>
+</section>
+
+<footer>
+  <p>Edward Carroll & Stephen McDonnell</p>
+</footer>
+
+</body>
+</html>

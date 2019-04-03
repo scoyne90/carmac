@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+title {
+  padding: 50px;
+  font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+</style>
+  <head>
+      <meta charset="UTF-8">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="/stylesheets/products.css">
+      <link rel="stylesheet" href="/stylesheets/menucss.css">
+  </head>
+  <body>
+    <center><img src="images\iphonelogo.png"  style="width:50%; height:50%;"/></center>
+      <h3>Please choose from our Apple range</h3>
+      <div class="navbar">
+
+        <A HREF="/">Homepage</A>
+        <div class="dropdown">
+          <button class="dropbtn">Brands
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="header">
+            </div>
+            <div class="row">
+              <div class="column">
+                <a href="/categories">All Brands</a>
+                <a href="/index">All Products</a>
+                <a href="/samsung">Samsung</a>
+                <a href="/apple">iPhone</a>
+                <a href="/haweii">Huawei</a>
+                <a href="/htc">HTC</a>
+                <a href="/xiaomi">Xiaomi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <A HREF="/about">About</A>
+      </div>
+      <div class="flex-container">
+          {{# each items2 }}
+              <article class="item" style ="margin:40px;">
+                  <div><a href="/Products_{{ this.ID }}"><img src="{{this.Image}}" style="width:300px;height:300px;"></div>
+                  <div>Name: {{ this.Name }}</div>
+                  <div>Brand: {{ this.Brand }}</div>
+                  <div>Price: {{ this.Price }}</div>
+              </article>
+          {{/each}}
+      </div>
+</body>
+</html>

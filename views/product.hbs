@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+title {
+  padding: 50px;
+  font: 40px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+</style>
+  <head>
+      <meta charset="UTF-8">
+      <title>{{ title }}</title>
+      <link rel="stylesheet" href="/stylesheets/products.css">
+      <link rel="stylesheet" href="/stylesheets/menucss.css">
+      <meta charset="UTF-8">
+      <title>{{ Fullitems.Name }}</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+      <link rel="stylesheet" href="/stylesheets/products.css">
+  </head>
+<body>
+  <div class="navbar">
+    <A HREF="/">Homepage</A>
+    <div class="dropdown">
+      <button class="dropbtn">Brands
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <div class="header">
+      </div>
+      <div class="row">
+      <div class="column">
+        <a href="/categories">All Brands</a>
+        <a href="/index">All Products</a>
+        <a href="/samsung">Samsung</a>
+        <a href="/apple">iPhone</a>
+        <a href="/haweii">Huawei</a>
+        <a href="/htc">HTC</a>
+        <a href="/xiaomi">Xiaomi</a>
+      </div>
+    </div>
+  </div>
+</div>
+<A HREF="/about">About</A>
+</div>
+  <h1>{{ Fullitems.Name }}</h1>
+  <h3>While Stocks last</h3>
+  <div class="flex-container">
+    <article class="item" style ="margin:10px;">
+      <div><img src="{{Fullitems.Image}}" style="width:500px;height:500px;"></div>
+      <div>Name: {{ Fullitems.Name }}</div>
+      <div>Price: {{ Fullitems.Price }}</div>
+      <div>Release: {{ Fullitems.Release }}</div>
+      <div>Creator: {{ Fullitems.Creator }}</div>
+      <div>Details: {{ Fullitems.Details }}</div>
+      <a href="#"class="btn btn-success pull-right" role="button">Add to Shopping Cart</a></p>
+    </article>
+    </div>
+    <footer>
+      <p>Eddie Carroll & Stephen McDonnell</p>
+    </footer>
+</body>
+</html>
